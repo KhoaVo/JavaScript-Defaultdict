@@ -25,7 +25,7 @@ This project tries to emulate the python dictionary class defaultdict.
 
 ======================
 
-##Function as a defaultvalue
+##Functions as a defaultvalue
 
 	var presents = ['shoes','phone','tv','xbox'];
 
