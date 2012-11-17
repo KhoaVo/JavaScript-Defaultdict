@@ -159,4 +159,3 @@ To do the same thing with default dict
 	console.log(carsInEachCity['CA']['San Jose']['Jeep']) //0
 
 As you can see using defaultdict makes initializing nested objects a breeze.
-Also it has the advantages of
