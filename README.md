@@ -7,37 +7,37 @@ This project tries to emulate the python dictionary class defaultdict.
 
 ##Simple usage
 
-var addressMap = defaultdict('Unknown');
+	var addressMap = defaultdict('Unknown');
 
-addressMap['bob'] = 'CA';
+	addressMap['bob'] = 'CA';
 
-console.log(addressMap.bob); //CA
-console.log(addressMap('bob')); //CA
+	console.log(addressMap.bob); //CA
+	console.log(addressMap('bob')); //CA
 
-console.log(addressMap('jil')); //Unknown
+	console.log(addressMap('jil')); //Unknown
 
-//the default value will be assigned to the key
+	//the default value will be assigned to the key
 
-console.log(addressMap.jil); //Unknown    
-						     
+	console.log(addressMap.jil); //Unknown    
+								 
 
-addressMap = addressMap.toObject(); // {bob:'CA',jil:'Unknown'}
+	addressMap = addressMap.toObject(); // {bob:'CA',jil:'Unknown'}
 
 ======================
 
 ##Function as a defaultvalue
 
-var presents = ['shoes','phone','tv','xbox'];
+	var presents = ['shoes','phone','tv','xbox'];
 
-var presentsMap = defaultdict(function(){return presents.pop();});
+	var presentsMap = defaultdict(function(){return presents.pop();});
 
-presentsMap['bob'] = 'computer';
+	presentsMap['bob'] = 'computer';
 
-console.log(presentsMap('bob')); // computer
+	console.log(presentsMap('bob')); // computer
 
-console.log(presentsMap('jil')); // xbox
+	console.log(presentsMap('jil')); // xbox
 
-console.log(presentsMap('alice')); // tv
+	console.log(presentsMap('alice')); // tv
 
 
 ======================
@@ -58,33 +58,33 @@ FL				Miami							Honda
 And we wanted to to get make an object that has the counts of each make
 organized by state, and city. That would look something like
 
-var carsInEachCity = {
-    'CA':{
-        'San Francisco':{
-            'Ford':2000,
-            'Nissan': 400,
-            'Honda': 5
-        },
-        'San Jose':{
-            'BMW': 7575,
-            'Lexus': 56
-        }
-    },
-    'FL':{
-        'Miami':{
-            'Ford':2000,
-            'Nissan': 400,
-            'Honda': 5
-        },
-        
-        'Orlando':{
-            'Ford':23,
-            'Nissan': 897,
-            'Honda': 52,
-            'GM': 3456
-        }   
-    }
-}
+	var carsInEachCity = {
+		'CA':{
+			'San Francisco':{
+				'Ford':2000,
+				'Nissan': 400,
+				'Honda': 5
+			},
+			'San Jose':{
+				'BMW': 7575,
+				'Lexus': 56
+			}
+		},
+		'FL':{
+			'Miami':{
+				'Ford':2000,
+				'Nissan': 400,
+				'Honda': 5
+			},
+			
+			'Orlando':{
+				'Ford':23,
+				'Nissan': 897,
+				'Honda': 52,
+				'GM': 3456
+			}   
+		}
+	}
 
 Usually one would loop through the records and do something like
 
