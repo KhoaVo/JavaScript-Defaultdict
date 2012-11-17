@@ -42,18 +42,17 @@ This project tries to emulate the python dictionary class defaultdict.
 
 ======================
 
-
 ##Advanced usage with nested defaultdicts
 
 Suppose we have a records stored somewhere that are in this format
-
-STATE				CITY						MAKE
-CA				San Francisco					Ford
-CA				San Francisco					Ford
-CA				San Francisco					BWM
-CA				San Jose						Lexus
-FL				Miami							Honda
-......
+	
+	STATE				CITY						MAKE
+	CA				San Francisco					Ford
+	CA				San Francisco					Ford
+	CA				San Francisco					BWM
+	CA				San Jose						Lexus
+	FL				Miami							Honda
+	......
 
 And we wanted to to get make an object that has the counts of each make
 organized by state, and city. That would look something like
@@ -159,4 +158,3 @@ To do the same thing with default dict
 	console.log(carsInEachCity['CA']['San Jose']['Jeep']) //0
 
 As you can see using defaultdict makes initializing nested objects a breeze.
-Also it has the advantages of
